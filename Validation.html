@@ -1,0 +1,64 @@
+<html>
+<style>
+.name{
+background-color: rgb(212 212 212);
+padding: 50px;
+/* margin:     9%; */
+margin-left:4rem;
+margin-top:2rem;
+text-align:center;
+border-radius:20px;
+width:400px;
+/* height:100%; */
+} 
+.flexz{
+    /* display: flex; */
+   display:grid;
+   gap:50px;
+   grid-template-columns:1fr 1fr;
+   justify-content: space-around;
+   align-items:center;
+   justify-content:center;
+    
+}
+
+#img
+{
+    margin-top: 3rem;
+    border-radius:20px;
+    width:400px;
+    /* height:100%; */
+}
+</style>
+
+<script>
+function check(){
+let a=document.getElementById("typ").value;
+let form=document.getElementById("frm ")
+if(a!="SRIMAN"){
+alert("you are not sriman");	
+return false;
+}
+form.submit();
+
+}
+</script>
+<body style="background-image:url(https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)">
+<div class="flexz">
+<div class="name">
+<h2>Enter The Information</h2>
+<form  id="frm">
+<p>Enter The Name:<input type="text" id="typ"></p>
+<p>Date of Birth: 
+<input type="date" id="dat"></p>
+<input type ="button" value="Submit" onclick="check()">
+</form>
+</div>
+<div class="svg">
+<img id="img"src="/undraw.jpg">
+    
+</div>
+</div>
+</body>
+
+</html>
