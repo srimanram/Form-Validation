@@ -5,7 +5,7 @@ background-color: rgb(212 212 212);
 padding: 50px;
 /* margin:     9%; */
 margin-left:4rem;
-margin-top:2rem;
+margin-top:4rem;
 text-align:center;
 border-radius:20px;
 width:400px;
@@ -14,6 +14,7 @@ width:400px;
 .flexz{
     /* display: flex; */
    display:grid;
+   margin-left: 5rem;
    gap:50px;
    grid-template-columns:1fr 1fr;
    justify-content: space-around;
@@ -24,9 +25,10 @@ width:400px;
 
 #img
 {
-    margin-top: 3rem;
+    margin-top: 5.7rem;
     border-radius:20px;
     width:400px;
+    height: 360px;
     /* height:100%; */
 }
 </style>
@@ -35,9 +37,20 @@ width:400px;
 function check(){
 let a=document.getElementById("typ").value;
 let form=document.getElementById("frm ")
+let dob=document.getElementById("dat")
+let sec=document.getElementById("opts")
 if(a!="SRIMAN"){
 alert("you are not sriman");	
 return false;
+}
+else{
+alert("welcome SRIMAN R");
+}
+if(dob="11.02.2003"){
+alert("Enter the Correct DOB");
+}
+if(sec!="IT-C"){
+alert("Enter the Correct Section");
 }
 form.submit();
 
@@ -48,10 +61,16 @@ form.submit();
 <div class="name">
 <h2>Enter The Information</h2>
 <form  id="frm">
-<p>Enter The Name:<input type="text" id="typ"></p>
-<p>Date of Birth: 
+<p>Enter The Name:<br><input type="text" id="typ"></p>
+<p>Date of Birth:<br>
 <input type="date" id="dat"></p>
+<p>Class:<br><select id="choose" CLASS="opts">
+    <option value="IT A" class="opts">IT A</option>
+    <option value="IT B" class="opts">IT B</option>
+    <option value="IT C" class="opts">IT C</option>
+</select><br></p>
 <input type ="button" value="Submit" onclick="check()">
+
 </form>
 </div>
 <div class="svg">
