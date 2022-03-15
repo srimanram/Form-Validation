@@ -31,43 +31,52 @@ width:400px;
     height: 360px;
     /* height:100%; */
 }
+.class{
+    align-items: center;
+    background-color: rgb(212 212 212);
+    text-align: center;
+    padding-right: 1rem;
+
+}
 </style>
 
 <script>
-function check(){
-let a=document.getElementById("typ").value;
-let form=document.getElementById("frm ")
-let dob=document.getElementById("dat")
-let sec=document.getElementById("opts")
-if(a!="SRIMAN"){
-alert("you are not sriman");	
-return false;
-}
-else{
-alert("welcome SRIMAN R");
-}
-if(dob="11.02.2003"){
-alert("Enter the Correct DOB");
-}
-if(sec!="IT-C"){
-alert("Enter the Correct Section");
-}
-form.submit();
-
+const check=()=>
+{
+    var a=document.getElementById("typ").value;
+    var b=document.getElementById("dat").value;
+    var c=document.getElementById("choose").value;
+    var form=document.getElementById("frm");
+    if(a!="sriman")
+    {
+        alert("please enter the correct name!!!!!!!");
+        return false;
+    }
+    if(b!="11-02-2003")
+    {
+        alert("please enter the correct dob!!!!!!!!");
+        return false;
+    }
+    if(c!="IT C")
+    {
+        alert("please enter the correct section!!!!!!!!");
+        return false;
+    }
+    form.submit();
 }
 </script>
 <body style="background-image:url(https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)">
 <div class="flexz">
 <div class="name">
 <h2>Enter The Information</h2>
-<form  id="frm">
+<form action="result.html"  id="frm">
 <p>Enter The Name:<br><input type="text" id="typ"></p>
 <p>Date of Birth:<br>
-<input type="date" id="dat"></p>
-<p>Class:<br><select id="choose" CLASS="opts">
-    <option value="IT A" class="opts">IT A</option>
-    <option value="IT B" class="opts">IT B</option>
-    <option value="IT C" class="opts">IT C</option>
+<input type="text" id="dat"></p>
+<p>Class:<br><select id="choose">
+    <option value="IT A">IT A</option>
+    <option value="IT B">IT B</option>
+    <option value="IT C">IT C</option>
 </select><br></p>
 <input type ="button" value="Submit" onclick="check()">
 
@@ -75,8 +84,13 @@ form.submit();
 </div>
 <div class="svg">
 <img id="img"src="/undraw.jpg">
+
+
     
 </div>
+</div>
+<div class="class">
+<h2 style="color: black;">© SRIMAN R</h2>
 </div>
 </body>
 
